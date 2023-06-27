@@ -1,11 +1,25 @@
 ---
 import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
+import { getCollection } from 'astro:content';
+const blogEntries = await getCollection('blog');
+const featured = blogEntries.filter((blog)=>(
+	blog.data.tags.includes('featured')
+))
+console.log(blogEntries[1].data.tags.includes('featured'))
 ---
 
 <Layout title="Featured" isCC={true}>
 	<div class="pt-10 pb-5">
 		<h1 class="text-6xl py-5 font-semibold">Featured Articles</h1>
 	</div>
-	<Card title="a" url="b" date="c"/>
+	{
+	featured.map((post)=>(
+	<Card 
+		title={post.data.title} 
+		url={"/blog/"+post.slug} 
+		date={post.data.date.toDateString()}
+	/>
+	))
+	}
 </Layout>
