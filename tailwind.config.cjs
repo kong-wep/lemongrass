@@ -7,8 +7,8 @@ module.exports = {
 			'mid': '#2E333C',
 			'main': '#393E46',
 			'light': '#535A65',
-			'accent': '#00ADB5',
-			'accent-mid':'#00888F',
+			'accent': '#2BB800',
+			'accent-mid':'#26A300',
 			'warn':'#D96C28',
 			'white': '#EEEEEE'
 		},
