@@ -1,0 +1,15 @@
+---
+export interface Props {
+	title: string;
+    url: string;
+    date: string;
+}
+
+const { title,url,date } = Astro.props;
+---
+<div class="rounded-lg m-3 p-4">
+    <a href={url} class="text-4xl font-black inline hover:text-accent hover:underline">
+        {title}
+    </a>
+    <p>{date}</p>
+</div>
