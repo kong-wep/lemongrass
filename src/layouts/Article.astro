@@ -1,0 +1,30 @@
+---
+import Nav from '../components/Nav.astro'
+
+const { frontmatter } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{frontmatter.title}</title>
+	</head>
+	<body class="dark:bg-base bg-white max-w-4xl block mx-auto px-6">
+		{frontmatter.hasNav?
+			<Nav title={frontmatter.title}/>
+			:
+			<></>
+		}	
+        <div class="dark:prose-invert prose
+        prose-p:text-lg prose-ul:text-lg
+		prose-h1:text-accent
+        my-10 ">
+            <slot />
+        </div>
+	</body>
+</html>

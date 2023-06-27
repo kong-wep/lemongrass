@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/Layout.astro";
+import LinkButton from "../components/LinkButton.astro";
+import CV from "../components/cv.md";
+---
+
+<Layout title="CV">
+	<div class="pt-10 pb-5">
+		<h1 class="text-6xl py-5 font-semibold">Pakkapol Nartthanarung</h1>
+		<blockquote class="text-2xl" id="quote">Aspiring developer, engineer, and student</blockquote>
+	</div>
+	<ul class="mt-8">
+		<LinkButton url="https://www.linkedin.com/in/pakkapol-nartthanarung-37a925277/" name="LinkedIn"/>
+		<LinkButton url="https://github.com/kong-wep" name="GitHub"/>
+		<LinkButton url="https://gitlab.com/toftpokk" name="GitLab"/>
+	</ul>
+	<CV/>
+</Layout>

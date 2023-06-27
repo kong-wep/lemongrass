@@ -1,0 +1,12 @@
+---
+export interface Props {
+	name: string;
+    url: string;
+    isActive: boolean;
+}
+
+const { name,url,isActive } = Astro.props;
+---
+<li><a class={
+    isActive ? "py-3 mx-1 px-3 border-b-4 border-accent hover:border-accent-mid text-accent hover:text-accent-mid" :"py-3 mx-1 px-3 hover:text-light"
+} href={url}>{name}</a></li>

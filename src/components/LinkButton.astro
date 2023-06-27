@@ -1,0 +1,9 @@
+---
+export interface Props {
+	name: string;
+	url: string;
+}
+
+const { name,url } = Astro.props;
+---
+<a class="bg-accent px-3 py-3 rounded-lg hover:bg-accent-mid" href={url}>{name}</a>
