@@ -8,7 +8,8 @@ const { title } = Astro.props;
 ---
 <ul class="select-none dark:text-white text-main font-medium text-2xl my-6 flex justify-start w-full">
     <li><span class="py-3 mx-1 px-3 text-xl text-accent">toftpokk<span class="dark:text-white text-mid">@lemongrass</span></span></li>
-    <NavLink name="CV" url="/" isActive={title == "CV"}/>
-    <NavLink name="Certifications" url="/certs" isActive={title == "Certifications"}/>
+    <NavLink name="Featured" url="/" isActive={title == "Featured"}/>
+    <NavLink name="Blog" url="/blog" isActive={title == "Blog"}/>
+    <NavLink name="Book Notes" url="/book-notes" isActive={title == "Book Notes"}/>
     <NavLink name="About" url="/about" isActive={title == "About"}/>
 </ul>
