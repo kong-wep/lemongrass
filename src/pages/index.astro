@@ -1,9 +1,11 @@
 ---
+import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Featured">
+<Layout title="Featured" isCC={true}>
 	<div class="pt-10 pb-5">
 		<h1 class="text-6xl py-5 font-semibold">Featured Articles</h1>
 	</div>
+	<Card title="a" url="b" date="c"/>
 </Layout>

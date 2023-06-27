@@ -1,0 +1,27 @@
+---
+import Card from "../../components/Card.astro";
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from 'astro:content';
+const blogEntries = await getCollection('blog');
+console.log(blogEntries[0].data.date)
+blogEntries.sort((a,b)=>{
+	return new Date(a.data.date) >
+	new Date(b.data.date)
+	? -1:1
+})
+---
+
+<Layout title="Blog" isCC={true}>
+	<div class="pt-10 pb-5">
+		<h1 class="text-6xl py-5 font-semibold">Blog</h1>
+	</div>
+	{
+	blogEntries.map((post)=>(
+		<Card 
+			title={post.data.title} 
+			url={"/blog/"+post.slug} 
+			date={post.data.date.toDateString()}
+		/>
+	))
+	}
+</Layout>

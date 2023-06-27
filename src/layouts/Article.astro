@@ -1,5 +1,6 @@
 ---
 import Nav from '../components/Nav.astro'
+import Footer from '../components/Footer.astro';
 
 const { frontmatter } = Astro.props;
 ---
@@ -15,16 +16,14 @@ const { frontmatter } = Astro.props;
 		<title>{frontmatter.title}</title>
 	</head>
 	<body class="dark:bg-base bg-white max-w-4xl block mx-auto px-6">
-		{frontmatter.hasNav?
-			<Nav title={frontmatter.title}/>
-			:
-			<></>
-		}	
+		<Nav title={frontmatter.title}/>
+		<h1 class="text-5xl font-black text-accent mt-10">{frontmatter.title}</h1>
         <div class="dark:prose-invert prose
         prose-p:text-lg prose-ul:text-lg
 		prose-h1:text-accent
         my-10 ">
             <slot />
         </div>
+		<Footer/>
 	</body>
 </html>
