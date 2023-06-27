@@ -23,5 +23,6 @@ Structure is a typical Astro project.
 * Code is in /src
 * Builds to /dist
 * Images is in /public
+* Blogs & Book notes in /src/content
 
 > Part of the Pandan Project
