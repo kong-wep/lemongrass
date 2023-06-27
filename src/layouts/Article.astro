@@ -18,9 +18,8 @@ const { frontmatter } = Astro.props;
 	<body class="dark:bg-base bg-white max-w-4xl block mx-auto px-6">
 		<Nav title={frontmatter.title}/>
 		<h1 class="text-5xl font-black text-accent mt-10">{frontmatter.title}</h1>
-        <div class="dark:prose-invert prose
-        prose-p:text-lg prose-ul:text-lg
-		prose-h1:text-accent
+        <div class="dark:prose-invert prose prose-xl
+        prose-ul:text-lg prose-h1:text-accent
         my-10 ">
             <slot />
         </div>
